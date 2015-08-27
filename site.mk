@@ -22,9 +22,9 @@ GLUON_SITE_PACKAGES := \
 	gluon-status-page \
 	haveged \
 	iptables \
-	iwinfo 
-##	gluon-neighbour-info \
-##	gluon-luci-private-wifi 
+	iwinfo \
+	gluon-neighbour-info \
+	gluon-luci-private-wifi 
 
 DEFAULT_GLUON_RELEASE := 0.8.3+exp$(shell date '+%Y%m%d')
 
