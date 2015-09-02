@@ -26,10 +26,10 @@ GLUON_SITE_PACKAGES := \
 	gluon-neighbour-info \
 	gluon-luci-private-wifi 
 
-DEFAULT_GLUON_RELEASE := 0.7+exp$(shell date '+%Y%m%d')
+DEFAULT_GLUON_RELEASE := 0.8+exp$(shell date '+%Y%m%d')
 
 #GLUON_RELEASE ?= $(DEFAULT_GLUON_RELEASE)
-GLUON_RELEASE ?= 0.0.1
+GLUON_RELEASE ?= $(DEFAULT_GLUON_RELEASE)
 
 # Default priority for updates.
 GLUON_PRIORITY ?= 0
