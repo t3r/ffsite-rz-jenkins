@@ -25,7 +25,7 @@ GLUON_SITE_PACKAGES := \
 	iwinfo \
 	gluon-luci-private-wifi 
 
-DEFAULT_GLUON_RELEASE := 0.8+exp$(shell date '+%Y%m%d')
+DEFAULT_GLUON_RELEASE := 0.7.2+exp$(shell date '+%Y%m%d')
 
 #GLUON_RELEASE ?= $(DEFAULT_GLUON_RELEASE)
 GLUON_RELEASE ?= $(DEFAULT_GLUON_RELEASE)
