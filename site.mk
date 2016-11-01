@@ -25,7 +25,7 @@ GLUON_SITE_PACKAGES := \
 	iwinfo \
 	gluon-luci-private-wifi 
 
-DEFAULT_GLUON_RELEASE := 2016.1.6+exp$(shell date '+%Y%m%d')
+DEFAULT_GLUON_RELEASE := 2016.2+exp$(shell date '+%Y%m%d')
 
 #GLUON_RELEASE ?= $(DEFAULT_GLUON_RELEASE)
 GLUON_RELEASE ?= $(DEFAULT_GLUON_RELEASE)
@@ -41,3 +41,5 @@ GLUON_PRIORITY ?= 0
 
 # Languages to include
 GLUON_LANGS ?= en de
+GLUON_REGION ?= eu
+GLUON_ATH10K_MESH=11s
