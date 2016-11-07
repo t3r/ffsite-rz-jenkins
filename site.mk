@@ -25,12 +25,12 @@ GLUON_SITE_PACKAGES := \
 	iwinfo \
 	gluon-luci-private-wifi 
 
-DEFAULT_GLUON_RELEASE := 2016.2+exp$(shell date '+%Y%m%d')
+DEFAULT_GLUON_RELEASE := 2016.2+b$(shell date '+%Y%m%d')
 
 #GLUON_RELEASE ?= $(DEFAULT_GLUON_RELEASE)
 GLUON_RELEASE ?= $(DEFAULT_GLUON_RELEASE)
 
-GLUON_BRANCH ?= experimental
+GLUON_BRANCH ?= beta
 export GLUON_BRANCH
 
 GLUON_TARGET ?= ar71xx-generic
