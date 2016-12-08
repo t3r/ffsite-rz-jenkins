@@ -1,7 +1,7 @@
-# This file allows specifying additional repositories to use
-# when building gluon.
-#
-# In most cases, it is not required so don't add it.
+GLUON_SITE_FEEDS="ssidchanger ffac"
+PACKAGES_SSIDCHANGER_REPO=https://github.com/ffod/gluon-ssid-changer.git
+#PACKAGES_SSIDCHANGER_COMMIT=1146ff354ff0bb99a100d6b067fc410068e7521d
+PACKAGES_SSIDCHANGER_BRANCH=chaos-calmer
 
 ##	GLUON_SITE_FEEDS
 #		for each feed name given, add the corresponding PACKAGES_* lines
