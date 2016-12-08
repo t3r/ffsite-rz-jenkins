@@ -20,7 +20,7 @@ GLUON_SITE_PACKAGES := \
 	gluon-mesh-vpn-fastd \
 	gluon-radvd \
 	gluon-setup-mode \
-	ffac-status-page-api \
+	gluon-status-page-api \
 	gluon-status-page \
 	iwinfo \
 	iptables \
