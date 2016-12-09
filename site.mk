@@ -1,5 +1,6 @@
 GLUON_SITE_PACKAGES := \
 	gluon-mesh-batman-adv-15 \
+	gluon-alfred \
 	gluon-respondd \
 	gluon-autoupdater \
 	gluon-config-mode-core \
@@ -10,6 +11,7 @@ GLUON_SITE_PACKAGES := \
 	gluon-config-mode-contact-info \
 	gluon-ebtables-filter-multicast \
 	gluon-ebtables-filter-ra-dhcp \
+#	gluon-ebtables-segment-mld \
 	gluon-luci-admin \
 	gluon-luci-autoupdater \
 	gluon-luci-portconfig \
@@ -20,7 +22,6 @@ GLUON_SITE_PACKAGES := \
 	gluon-mesh-vpn-fastd \
 	gluon-radvd \
 	gluon-setup-mode \
-	gluon-status-page-api \
 	gluon-status-page \
 	iwinfo \
 	iptables \
@@ -137,7 +138,7 @@ GLUON_SITE_PACKAGES += \
         kmod-atl2
 endif
 
-DEFAULT_GLUON_RELEASE := 2016.2+exp$(shell date '+%Y%m%d')
+DEFAULT_GLUON_RELEASE := 2016.2.1+exp$(shell date '+%Y%m%d')
 
 #GLUON_RELEASE ?= $(DEFAULT_GLUON_RELEASE)
 GLUON_RELEASE ?= $(DEFAULT_GLUON_RELEASE)
