@@ -19,6 +19,7 @@ GLUON_SITE_PACKAGES := \
 	gluon-neighbour-info \
 	gluon-mesh-vpn-fastd \
 	gluon-luci-mesh-vpn-fastd \
+	gluon-client-bridge \
 	gluon-radvd \
 	gluon-setup-mode \
 	gluon-status-page \
