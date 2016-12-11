@@ -61,13 +61,7 @@ GLUON_SITE_PACKAGES += \
         kmod-usb-hid \
         kmod-usb-net \
         kmod-usb-net-asix \
-        kmod-usb-net-dm9601-ether \
-        kmod-sky2 \
-        kmod-r8169 \
-        kmod-forcedeth \
-        kmod-8139too \
-	kmod-atl2 \
-	kmod-igb
+        kmod-usb-net-dm9601-ether 
 endif
 
 ifeq ($(GLUON_TARGET),x86-64)
@@ -78,13 +72,7 @@ GLUON_SITE_PACKAGES += \
         kmod-usb-hid \
         kmod-usb-net \
         kmod-usb-net-asix \
-        kmod-usb-net-dm9601-ether \
-        kmod-sky2 \
-        kmod-r8169 \
-        kmod-forcedeth \
-        kmod-8139too \
-	kmod-atl2 \
-	kmod-igb
+        kmod-usb-net-dm9601-ether 
 endif
 
 # Add offline ssid, network drivers and usb stuff to raspberry and banana pi images
@@ -97,12 +85,7 @@ GLUON_SITE_PACKAGES += \
         kmod-usb-hid \
         kmod-usb-net \
         kmod-usb-net-asix \
-        kmod-usb-net-dm9601-ether \
-        kmod-sky2 \
-        kmod-r8169 \
-        kmod-forcedeth \
-        kmod-8139too \
-        kmod-atl2
+        kmod-usb-net-dm9601-ether 
 endif
 
 ifeq ($(GLUON_TARGET),brcm2708-bcm2709)
@@ -113,12 +96,7 @@ GLUON_SITE_PACKAGES += \
         kmod-usb-hid \
         kmod-usb-net \
         kmod-usb-net-asix \
-        kmod-usb-net-dm9601-ether \
-        kmod-sky2 \
-        kmod-r8169 \
-        kmod-forcedeth \
-        kmod-8139too \
-        kmod-atl2
+        kmod-usb-net-dm9601-ether
 endif
 
 ifeq ($(GLUON_TARGET),sunxi)
@@ -129,12 +107,7 @@ GLUON_SITE_PACKAGES += \
         kmod-usb-hid \
         kmod-usb-net \
         kmod-usb-net-asix \
-        kmod-usb-net-dm9601-ether \
-        kmod-sky2 \
-        kmod-r8169 \
-        kmod-forcedeth \
-        kmod-8139too \
-        kmod-atl2
+        kmod-usb-net-dm9601-ether
 endif
 
 DEFAULT_GLUON_RELEASE := 2016.2.1+exp$(shell date '+%Y%m%d')
