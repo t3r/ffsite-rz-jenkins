@@ -39,7 +39,7 @@ node {
     for( target in targets ) {
       stage( target ) {
         dir('gluon') {
-          sh "echo make GLUON_TARGET=${target} GLUON_SITEDIR=${workspace}/site GLUON_OUTPUTDIR=${workspace}/output clean"
+          sh "make clean GLUON_TARGET=${target} GLUON_SITEDIR=${workspace}/site GLUON_OUTPUTDIR=${workspace}/output"
           sh "make GLUON_RELEASE=\$(echo ${GLUON_RELEASE_TAG}|cut -c2-) GLUON_TARGET=${target} GLUON_SITEDIR=${workspace}/site GLUON_OUTPUTDIR=${workspace}/output V=99"
         }
       }
