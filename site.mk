@@ -111,16 +111,8 @@ GLUON_SITE_PACKAGES += \
         kmod-usb-net-dm9601-ether
 endif
 
-DEFAULT_GLUON_RELEASE := 2016.2.1+exp$(shell date '+%Y%m%d')
 
-#GLUON_RELEASE ?= $(DEFAULT_GLUON_RELEASE)
-GLUON_RELEASE ?= $(DEFAULT_GLUON_RELEASE)
-
-GLUON_BRANCH ?= experimental
-export GLUON_BRANCH
-
-#GLUON_TARGET ?= ar71xx-generic
-#export GLUON_TARGET
+#set GLUON_RELEASE, GLUON_BRANCH and GLUON_TARGET from the command line
 
 # Default priority for updates.
 GLUON_PRIORITY ?= 0
