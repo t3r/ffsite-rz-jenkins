@@ -76,7 +76,7 @@ node {
     /* create and sign manifest */
     stage ("manifest") {
         dir('gluon') {
-          sh "make GLUON_SITEDIR=${workspace}/site GLUON_OUTPUTDIR=${workspace}/output GLUON_BRANCH=${GLUON_BRANCH} manifest"
+          sh "make GLUON_SITEDIR=${workspace}/site GLUON_OUTPUTDIR=${workspace}/output GLUON_BRANCH=${GLUON_BRANCH} GLUON_RELEASE=\$(echo ${GLUON_RELEASE_TAG}|cut -c2-) V=s manifest"
           sh "LD_LIBRARY_PATH=${workspace}/lib/lib PATH=\$PATH:${workspace}/lib/bin ${workspace}/gluon/contrib/sign.sh ~/freifunk/fflauenburg ${workspace}/output/images/sysupgrade/${GLUON_BRANCH}.manifest"
         }
     }
