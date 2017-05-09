@@ -1,6 +1,6 @@
 #!groovy
 
-def GLUON_RELEASE_TAG = "v2016.2.5x$env.BUILD_NUMBER"
+def GLUON_RELEASE_TAG = "v2016.2.5"
 def GLUON_URL = "https://github.com/freifunk-gluon/gluon.git"
 def GLUON_BRANCH = "experimental"
 
@@ -39,8 +39,8 @@ node {
     for( target in targets ) {
       stage( target ) {
         dir('gluon') {
-          sh "make clean GLUON_RELEASE=\$(echo ${GLUON_RELEASE_TAG}|cut -c2-) GLUON_TARGET=${target} GLUON_SITEDIR=${workspace}/site GLUON_OUTPUTDIR=${workspace}/output V=s"
-          sh "make GLUON_RELEASE=\$(echo ${GLUON_RELEASE_TAG}|cut -c2-) GLUON_TARGET=${target} GLUON_SITEDIR=${workspace}/site GLUON_OUTPUTDIR=${workspace}/output V=99"
+          sh "make clean GLUON_RELEASE=\$(echo ${GLUON_RELEASE_TAG}|cut -c2-).x$env.BUILD_ID GLUON_TARGET=${target} GLUON_SITEDIR=${workspace}/site GLUON_OUTPUTDIR=${workspace}/output V=s"
+          sh "make GLUON_RELEASE=\$(echo ${GLUON_RELEASE_TAG}|cut -c2-).x$env.BUILD_ID GLUON_TARGET=${target} GLUON_SITEDIR=${workspace}/site GLUON_OUTPUTDIR=${workspace}/output V=99"
         }
       }
     }
@@ -76,7 +76,7 @@ node {
     /* create and sign manifest */
     stage ("manifest") {
         dir('gluon') {
-          sh "make GLUON_SITEDIR=${workspace}/site GLUON_OUTPUTDIR=${workspace}/output GLUON_BRANCH=${GLUON_BRANCH} GLUON_RELEASE=\$(echo ${GLUON_RELEASE_TAG}|cut -c2-) V=s manifest"
+          sh "make GLUON_SITEDIR=${workspace}/site GLUON_OUTPUTDIR=${workspace}/output GLUON_BRANCH=${GLUON_BRANCH} GLUON_RELEASE=\$(echo ${GLUON_RELEASE_TAG}|cut -c2-).x$env.BUILD_ID V=s manifest"
           sh "LD_LIBRARY_PATH=${workspace}/lib/lib PATH=\$PATH:${workspace}/lib/bin ${workspace}/gluon/contrib/sign.sh ~/freifunk/fflauenburg ${workspace}/output/images/sysupgrade/${GLUON_BRANCH}.manifest"
         }
     }
