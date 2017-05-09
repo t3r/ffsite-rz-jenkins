@@ -1,6 +1,6 @@
 #!groovy
 
-def GLUON_RELEASE_TAG = "v2016.2.5"
+def GLUON_RELEASE_TAG = "v2016.2.5x$env.BUILD_NUMBER"
 def GLUON_URL = "https://github.com/freifunk-gluon/gluon.git"
 def GLUON_BRANCH = "experimental"
 
